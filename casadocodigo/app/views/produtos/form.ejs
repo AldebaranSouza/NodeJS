@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casa do Código</title>
+</head>
+<body>
+    <!--Precisa colocar a propriedade "name" nas tags, 
+        para o bodyParser colocar os dados do form no JSON-->
+    <form action="/produtos" method="POST">
+        <div>
+            <label>Título do Livro</label>
+            <input type="text" name="titulo" id="titulo" value="<%=produto.titulo%>" placeholder="Digite o título do livro" />
+            <%=error.titulo%>
+        </div>
+        <div>
+            <label>Preço</label>
+            <input type="text" name="preco" id="preco" value="<%=produto.preco%>"placeholder="Digite o preço do livro" />
+            <%=error.preco%>
+        </div>
+        <div>
+            <label>Descrição do Livro</label>
+            <textarea name="descricao" ="descricao" rows="5" cols="20" placeholder="fale sobre o livro"><%=produto.descricao%></textarea>
+        </div>
+        <input type="submit" value="Salvar"  />
+    </form>
+</body>
+</html>
